@@ -2,7 +2,7 @@ extends Node2D
 
 const CARD_SCENE_PATH = "res://Scenes/Card.tscn"
 const CARD_DRAW_SPEED = 0.3
-var  player_deck = ["Rock", "Rock", "Rock"]
+var  player_deck = ["Rock", "Rock", "Rock", "Rock"]
 
 
 
@@ -28,7 +28,8 @@ func draw_card():
 	print("Draw Card")
 	$RichTextLabel.text = str(player_deck.size())
 	var card_scene = preload(CARD_SCENE_PATH)
-	var new_card = card_scene.instantiate()
+	var new_card = card_scene.instantiate(3)
 	$"../CardManager".add_child(new_card)
 	new_card.name = "Card"
 	$"../PlayerHand".add_card_to_hand(new_card, CARD_DRAW_SPEED)
+
