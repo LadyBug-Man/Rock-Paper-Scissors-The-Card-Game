@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://dl6w2jw0w3gf"]
+[gd_scene load_steps=9 format=3 uid="uid://dl6w2jw0w3gf"]
 
 [ext_resource type="Script" path="res://Scripts/CardManager.gd" id="1_3cjts"]
 [ext_resource type="PackedScene" uid="uid://bnk70k044btg5" path="res://Scenes/CardSlot.tscn" id="2_e5cwi"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://h7un415qhgxa" path="res://Assets/Back_of_card.png" id="4_8wbwa"]
 [ext_resource type="Script" path="res://Scripts/Deck.gd" id="4_rcwdb"]
 [ext_resource type="Script" path="res://Scripts/InputManager.gd" id="6_libx0"]
+[ext_resource type="Texture2D" uid="uid://c1o8iyac33yf2" path="res://Assets/Arena_Design_V2.png" id="7_3phm3"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_c15mr"]
 size = Vector2(154, 200)
@@ -16,13 +17,11 @@ size = Vector2(154, 200)
 script = ExtResource("1_3cjts")
 
 [node name="CardSlot" parent="." instance=ExtResource("2_e5cwi")]
-position = Vector2(783, 584)
+position = Vector2(960, 676)
 
 [node name="CardSlot2" parent="." instance=ExtResource("2_e5cwi")]
-position = Vector2(963, 586)
-
-[node name="CardSlot3" parent="." instance=ExtResource("2_e5cwi")]
-position = Vector2(1143, 585)
+position = Vector2(961, 441)
+rotation = 3.14159
 
 [node name="PlayerHand" type="Node2D" parent="."]
 script = ExtResource("3_1bpcg")
@@ -56,3 +55,11 @@ text = "0 "
 
 [node name="InputManager" type="Node2D" parent="."]
 script = ExtResource("6_libx0")
+
+[node name="ArenaDesign" type="Sprite2D" parent="."]
+z_index = -4
+z_as_relative = false
+texture_filter = 1
+position = Vector2(958, 546)
+scale = Vector2(5, 5)
+texture = ExtResource("7_3phm3")
