@@ -20,7 +20,7 @@ script = ExtResource("1_3cjts")
 position = Vector2(960, 676)
 
 [node name="CardSlot2" parent="." instance=ExtResource("2_e5cwi")]
-position = Vector2(961, 441)
+position = Vector2(961, 436)
 rotation = 3.14159
 
 [node name="PlayerHand" type="Node2D" parent="."]
