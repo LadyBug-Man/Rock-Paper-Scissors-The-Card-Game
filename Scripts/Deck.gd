@@ -3,6 +3,7 @@ extends Node2D
 const CARD_SCENE_PATH = "res://Scenes/Card.tscn"
 const CARD_DRAW_SPEED = 0.3
 var  player_deck = ["Rock", "Rock", "Rock", "Rock"]
+var can_draw = true
 
 
 
@@ -18,6 +19,12 @@ func _ready():
 
 #When the deck is clicked draw a card and add it to your hand
 func draw_card():
+	
+	#Checks to see if hand is full and stops player drawing if it is
+	if not can_draw:
+		print("Hand is full, Cannot Draw")
+		return
+	
 	var card_drawn = player_deck[0]
 	player_deck.erase(card_drawn)
 	

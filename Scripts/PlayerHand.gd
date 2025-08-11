@@ -15,9 +15,17 @@ func _ready():
 
 
 func add_card_to_hand(card, speed):
+	#Stops being able to add cards to hand when hand is full
+	if player_hand.size() >= 3:
+		$"../Deck".can_draw = false;
+		return
+	
 	if card not in player_hand:
 		player_hand.insert(0, card)
 		update_hand_position(speed)
+		#Stops being able to add cards to hand when hand is full (again)
+		if player_hand.size() >=3:
+			$"../Deck".can_draw = false
 	else:
 		animate_card_to_position(card, card.position_in_hand, DEFAULT_CARD_MOVE_SPEED)
 
@@ -47,4 +55,7 @@ func remove_card_from_hand(card):
 	if card in player_hand:
 		player_hand.erase(card)
 		update_hand_position(DEFAULT_CARD_MOVE_SPEED)
+		#When space opens in the hand you can draw a card again
+		if player_hand.size() < 3:
+			$"../Deck".can_draw = true
 	
