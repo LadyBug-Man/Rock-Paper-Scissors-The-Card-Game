@@ -18,7 +18,7 @@ func add_card_to_hand(card, speed):
 	#Stops being able to add cards to hand when hand is full
 	if player_hand.size() >= 3:
 		$"../Deck".can_draw = false;
-		return
+		#return -> caused bug where card wouldnt snap back to player hand if 3 cards where held
 	
 	if card not in player_hand:
 		player_hand.insert(0, card)

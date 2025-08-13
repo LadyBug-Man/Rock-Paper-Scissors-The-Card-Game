@@ -1,11 +1,11 @@
 [gd_scene load_steps=9 format=3 uid="uid://dl6w2jw0w3gf"]
 
-[ext_resource type="Script" path="res://Scripts/CardManager.gd" id="1_3cjts"]
+[ext_resource type="Script" uid="uid://bnsk4ox7mflga" path="res://Scripts/CardManager.gd" id="1_3cjts"]
 [ext_resource type="PackedScene" uid="uid://bnk70k044btg5" path="res://Scenes/CardSlot.tscn" id="2_e5cwi"]
-[ext_resource type="Script" path="res://Scripts/PlayerHand.gd" id="3_1bpcg"]
+[ext_resource type="Script" uid="uid://cc3x87gnt1pqc" path="res://Scripts/PlayerHand.gd" id="3_1bpcg"]
 [ext_resource type="Texture2D" uid="uid://h7un415qhgxa" path="res://Assets/Back_of_card.png" id="4_8wbwa"]
-[ext_resource type="Script" path="res://Scripts/Deck.gd" id="4_rcwdb"]
-[ext_resource type="Script" path="res://Scripts/InputManager.gd" id="6_libx0"]
+[ext_resource type="Script" uid="uid://i1gxxff0rpja" path="res://Scripts/Deck.gd" id="4_rcwdb"]
+[ext_resource type="Script" uid="uid://c1jy3mes36v4g" path="res://Scripts/InputManager.gd" id="6_libx0"]
 [ext_resource type="Texture2D" uid="uid://c1o8iyac33yf2" path="res://Assets/Arena_Design_V2.png" id="7_3phm3"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_c15mr"]

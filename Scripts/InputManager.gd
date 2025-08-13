@@ -40,13 +40,3 @@ func raycast_at_cursor():
 		elif result_collision_mask == COLLISION_MASK_DECK:
 			#Deck Clicked
 			deck_reference.draw_card()
-
-
-
-
-
-
-
-
-
-

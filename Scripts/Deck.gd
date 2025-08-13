@@ -51,4 +51,3 @@ func draw_multiple_cards(amount: int):
 	for i in range(min(amount, player_deck.size())):
 		draw_card()
 		await get_tree().create_timer(0.3).timeout
-
